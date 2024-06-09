@@ -1,0 +1,8 @@
+//I google sheets, velg Extensions -> Apps script.
+//Dette kan skrives inn der, så vil det legge alt som POSTes inn i regnearket.
+//Det bør jo håndteres og skrives i riktig kolonne osv etterhvert.
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  sheet.appendRow([e.postData.contents]);
+}
